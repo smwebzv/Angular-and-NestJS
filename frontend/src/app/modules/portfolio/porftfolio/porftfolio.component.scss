@@ -1,0 +1,75 @@
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-holder {
+  margin: auto;
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-switch {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    input {
+      width: 60px;
+      height: 30px;
+    }
+
+    label {
+      margin-left: 20px;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .submit-button {
+    text-align: right;
+    margin-top: 20px;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  padding: 20px 10px;
+  background-color: #ededed;
+
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  margin-top: 20px;
+
+  .card-img-top{
+    height: 250px;
+  }
+
+  .card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.portfolio_info {
+  display: flex;
+  justify-content: space-between;
+
+  .customer_link {
+    overflow: hidden;
+    max-width: 250px;
+    text-overflow: ellipsis;
+  }
+}
+
+.delete-portfolio {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}

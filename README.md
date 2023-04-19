@@ -11,7 +11,7 @@ Task: Develop a small web application that lets manage the list of showcased wor
 
 **3-CRUD (Create, Read, Update, Delete) operations: Implement functionality for adding, editing, and removing entries from the portfolio.**. 
 
-**4-Portfolio display: Develop the functionality to display the portfolio entries in a list or grid format.**. 
+**4-Portfolio display: Develop the functionality to display the portfolio entries in a list or grid format.**.
 
 **5-Image Upload: Implement functionality to allow the user to upload images for each portfolio entry.**. 
 

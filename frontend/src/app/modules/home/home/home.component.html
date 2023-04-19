@@ -1,0 +1,91 @@
+<div class="head-container">
+  <div class="container">
+    <div class="head-info-container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <h4>Hello there, I am</h4>
+          <h1>Slavisa Markovic</h1>
+          <h4>Full stack developer</h4>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="user-image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="middle-holder">
+    <h1>Some words about me</h1>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 about-me-hold">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        <br />
+        <button type="button" class="btn btn-primary">Download my CV</button>
+      </div>
+      <div class="col-sm-12 col-md-6 about-me-hold">
+        <div class="progress-bar-holder">
+          <div>Html</div>
+          <mat-progress-bar mode="determinate" value="95"></mat-progress-bar>
+        </div>
+        <div class="progress-bar-holder">
+          <div>Css</div>
+          <mat-progress-bar mode="determinate" value="98"></mat-progress-bar>
+        </div>
+        <div class="progress-bar-holder">
+          <div>Javascript</div>
+          <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+        </div>
+        <div class="progress-bar-holder">
+          <div>Angular</div>
+          <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+        </div>
+        <div class="progress-bar-holder">
+          <div>NextJS</div>
+          <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="middle-holder">
+    <div class="manage_portfolios">
+      <h1>Check my latest work</h1>
+      <button type="button" routerLink="/portfolio" class="btn btn-link">
+        Manage portfolios
+      </button>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let d of portfolios$ | async">
+        <div class="card">
+          <img
+            *ngIf="d.fileUrl"
+            [src]="'http://localhost:3001/' + d.fileUrl"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ d.title }}</h5>
+            <p class="card-text">{{ d.description }}</p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              *ngIf="d.customer_link"
+              (click)="openLink(d.customer_link)"
+            >
+              Open project
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
